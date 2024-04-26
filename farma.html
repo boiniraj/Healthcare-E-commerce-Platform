@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+ 
+   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+   
+<style>
+    .card{
+        width: 10%;
+    }
+    .imgs:hover{
+        
+        
+        box-shadow: 1px 1px 10px rgb(195, 192, 192);
+        border-radius: 5px;
+    }
+    .imgs{
+        border-radius: 5px;
+    }
+    .grad{
+       
+        width: 90%;
+        background-image: linear-gradient(360deg, rgb(86, 86, 172), rgb(84, 84, 161));
+        
+        color: white;
+    }
+    .box{
+        
+        padding:2%;
+      width: 30%;
+      border-radius: 5px;
+    }
+    .box:hover{
+        box-shadow: 1px 1px 8px rgb(189, 186, 186);
+    }
+    label{
+        font-size: 18px;
+        color: black;
+    }
+    .head{
+        color: blue;
+        text-align: center;
+    }
+    .req{
+        color: red;
+        
+    }
+    .def{
+        cursor: default;
+
+    }
+    
+    
+</style>
+
+
+</head>
+
+<body class="container-fluid">
+    <nav class="border border-bottom-1 border-top-1 justify-content-between d-flex align-items-center p-2 "><!--nav-->
+        <div class="navbar-brand ps-3">
+            <img src="images/logo_big.svg">
+        </div>
+        <div class="d-flex list-unstyled ">
+            <li class="nav-item me-3"><a class="bi bi-person-fill nav-link fw-bold .def" data-bs-toggle="modal" data-bs-target="#Reg" >Register</a></li>
+            <li class="nav-item me-3 "><a class="bi bi bi-person-fill nav-link fw-bold .def" data-bs-toggle="modal" data-bs-target="#Login">Login</a></li>
+            <li class="nav-item me-3"><a class="bi bi-percent nav-link fw-bold .def" href="">Offers</a></li>
+            <li class="nav-item pe-5 "><a class="bi bi-cart nav-link fw-bold .def" href="">Cart</a></li>
+        </div>
+
+<div class="modal" id="Reg"><!--model-->
+
+    <div class="modal-dialog "><!--model-dialog-->
+
+        <div class="modal-content"><!--modal-content-->
+
+
+            <div class="modal-header "><!--model-header-->
+   
+               <h3 class="bi bi-person-fill ms-3 head  ">Register</h3>
+               <button class="btn btn-close btn btn-danger" data-bs-dismiss="modal"></button>
+            </div><!--model-header-->
+
+               <div class="modal-body"><!--modal-body-->
+                <form action="">
+
+                <div><label class="form-label">FirstName</label><span class="req">*</span></div>
+                <div><input type="text" placeholder="FirstName" class="form-control"></div>
+
+                <div class="mt-2"><label class="form-label">LastName</label><span class="req">*</span></div>
+                <div><input type="text" placeholder="LastName" class="form-control"></div>
+
+                <div class="mt-2"><label class="form-label">Date of Birth</label></div>
+                <div><input type="date"  min="2018-01-01" max="2024-02-29" class="form-control"></div>
+
+                <div class="mt-2"><label class="form-label">Age</label><span class="req">*</span></div>
+                <div><input type="number" min="10" max="100" class="form-control"></div>
+
+                <div class="mt-2"><label class="form-label">Current Designation</label></div>
+                <div class="mt-1"><input type="radio"class="form-check-input" id="stu" name="desg"><label>Student</label></div>
+                <div class="mt-1"><input type="radio"class="form-check-input" id="fres" name="desg"><label>Fresher</label></div>
+                <div class="mt-1"><input type="radio"class="form-check-input" id="exp" name="desg"><label>Experienced</label></div>
+
+                <div class="mt-2"><label class="form-label">Highest Qualification</label></div>
+                <div><select id="sel" name="sel" class="form-select">
+                    <option>not Applicable</option>
+                    <option>Master of computer Applications</option>
+                    <option>Bachelor of science</option>
+                    <option>Bachelor of Technology</option>
+                    <option>Pharmacy</option>
+                    <option>Arts</option>
+                </select></div>
+
+
+                <div class="mt-2"><label class="form-label">Lowest Qualification</label></div>
+                <div><select id="ssc" name="ssc" class="form-select">
+                    <option>SSC</option>
+                    <option>Intermediate</option>
+                </select></div>
+
+                  <div class="mt-2"><label class="form-label">Addres</label></div>
+                <div>
+                  <textarea d="w3review" name="w3review" rows="4" cols="50" class="form-control">
+
+                  </textarea>
+
+                </div>
+
+                <div class="mt-2 form-label"><label>UserName</label><span class="req">*</span></div>
+                <div><input type="text"id="uname" name="uname" class="form-control"></div>
+                
+                <div class="mt-2 form-label" ><label>Password</label><span class="req">*</span></div>
+                <div><input type="password" id="pword" name="pword" class="form-control"></div>
+
+                <div class="modal-footer text-start mt-3">
+                    <button type="submit" class="btn btn-success">Register</button>
+                    <button type="reset" class="btn btn-danger">Reset</button>
+                </div>
+            </form>
+               </div><!--modal-body-->
+
+        </div><!--modal-content-->
+
+    </div><!--model-dialog-->
+
+</div><!--model-->
+
+
+
+<div class="modal" id="Login"><!--modal-->
+    <div class="modal-dialog"><!--modal-dialog-->
+        <div class="modal-content"><!--modal-content-->
+
+            <div class="modal-header"><!--modal-header-->
+                <h3 class="bi bi bi-person-fill head">Login</h3>
+                <button class="btn btn-close btn btn-danger" data-bs-dismiss="modal"></button>
+
+            </div><!--modal-header-->
+
+            <div class="modal-body"><!--modal-body-->
+
+
+               <form>
+                <div><label class="form-label">UserName</label></div>
+                <div><input type="text" class="form-control"></div>
+
+                <div class="mt-2"><label class="form-label">Password</label></div>
+                <div><input type="password" class="form-control"></div>
+
+                <div class="mt-3 modal-footer">
+                    <button type="submit" class="btn btn-success">Login</button>
+                    <button class="btn btn-danger" data-bs-dismiss="modal" >Cancel</button>
+                </div>
+
+               </form>
+
+
+            </div><!--modal-body-->
+
+        </div><!--modal-content-->
+
+
+
+
+
+
+
+
+
+
+
+
+    </div><!--modal-dialog-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div><!--modal-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </nav><!--nav-->
+    <div class="border border-top-0 p-2 d-flex list-unstyled justify-content-center align-items-center gap-5"><!--header-->
+        <li><a class="nav-link" href="">Medicine</a></li>
+        <li><a class="nav-link" href="">Lab Tests</a></li>
+         <div class="dropdown">
+            <li class=" dropdown-toggle " data-bs-toggle="dropdown">Healthcare</li>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item"> DiabeteCare</li>
+                <li class="dropdown-item"> DiabeteCare</li>
+
+            </ul>
+         </div>
+         <li><a class="nav-link" href="">Health Blog</a></li>
+         <li><a class="nav-link" href="">PLUS</a></li>
+         <li><a class="nav-link" href="">Offers</a></li>
+         <li><a class="nav-link" href=""> Value Store</a></li>
+    </div><!--header-->
+
+    <div class="mt-5 ms-6 ps-5 d-flex justify-content-around w-50 " ><!---->
+        <div>
+        <h3 class="">What are you looking for?</h3>
+    </div>
+
+    <div><span>Order with prescription. </span></div>
+    </div>
+    <div class="input-group mt-5 justify-content-center position-sticky top-0"><!--search-->
+        <input type="search" class="w-50 p-2 rounded rounded-5">
+        <button class="btn btn-info"><span class="bi bi-search "></span></button>
+    </div><!--search-->
+
+    <div class="mt-5 d-flex w-100 ms-5 "><!--card-->
+      
+        <div class="card border border-0"><!--1-->
+            <div class="card-body text-center  ">
+                <img src="images/medicine.webp" width="100">
+                <hr/>
+            </div>
+            <div class="card-title border border-0 text-center">Medicine</div>
+            <div class="card-footerborder border-0 text-center">UPTO 25% OFF</div>
+
+        </div>
+
+        <div class="card border border-0"><!--2-->
+            <div class="card-body text-center  ">
+                <img src="images/lab.webp" width="100">
+                <hr/>
+            </div>
+            <div class="card-title border border-0 text-center">Medicine</div>
+            <div class="card-footerborder border-0 text-center">UPTO 25% OFF</div>
+
+        </div>
+
+        <div class="card border border-0 "><!--3-->
+            <div class="card-body text-center  ">
+                <img src="images/healthcare_ff.webp" width="100">
+                <hr/>
+            </div>
+            <div class="card-title border border-0  text-center">Medicine</div>
+            <div class="card-footer border border-0 text-center">UPTO 25% OFF</div>
+
+        </div>
+
+
+        <div class="card border border-0"><!--4-->
+            <div class="card-body text-center  ">
+                <img src="images/health_blogs_ff.webp" width="100">
+                <hr/>
+            </div>
+            <div class="card-title border border-0 text-center">Medicine</div>
+            <div class="card-footerborder border-0 text-center">UPTO 25% OFF</div>
+
+        </div>
+
+
+        <div class="card  border border-0"><!--5-->
+            <div class="card-body text-center  ">
+                <img src="images/plus_ff.webp" width="100">
+                <hr/>
+            </div>
+            <div class="card-title border border-0 text-center">Medicine</div>
+            <div class="card-footerborder border-0 text-center">UPTO 25% OFF</div>
+
+        </div>
+
+
+        <div class="card  border border-0"><!--6-->
+            <div class="card-body text-center  ">
+                <img src="images/offers_ff (1).webp" width="100" ">
+                <hr/>
+            </div>
+            <div class="card-title border border-0 text-center">Medicine</div>
+            <div class="card-footerborder border-0 text-center">UPTO 25% OFF</div>
+
+        </div>
+         
+
+        <div class="card border border-0"><!--7-->
+            <div class="card-body text-center  ">
+                <img src="images/value_store.png" width="100" >
+                <hr/>
+            </div>
+            <div class="card-title border border-0 text-center fs-5 fw-normal">Medicine</div>
+            <div class="card-footerborder border-0 text-center">UPTO 25% OFF</div>
+
+        </div>
+    </div><!--card-->
+
+
+
+
+    <div class="carousel slide mt-5 justify-content-center  ps-2 w-100" data-bs-ride="carousel"  id="banners"><!--carousel slide-->     
+        <div class="carousel-inner "><!--carousel-inner-->
+
+            <div class=" d-flex gap-3 w-75"><!--carousel-item-->
+            <img src="images/farma_slide1.webp" height="200" class="w-50  ">
+            <img src="images/farma_slide2.webp" height="200" class="w-50   ">
+            <img src="images/farma_slide3.webp" height="200" class="w-50 ">
+            </div><!--carousel-item-->
+
+            
+                    
+        </div><!--carousel-inner-->
+        <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#banners"><span class="carousel-control-prev-icon"></span></button>
+        <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#banners"><span class="carousel-control-next-icon"></span></button>
+
+        <div class="carousel-indicators"> <!--carousel-indicators-->
+          <button class="active" data-bs-slide-to="0" data-bs-target="#banners"></button>
+          <button data-bs-slide-to="1" data-bs-target="#banners"></button>
+          <button data-bs-slide-to="2" data-bs-target="#banners"></button>
+          </div>
+  </div><!--carousel slide-->
+
+
+  <div class="mt-5"><!--powerdeby-->
+    <h2 class="">Lab Tests by Health Concern</h2>
+    <span>Powered by </span><span> <img src="images/Thyrocare.webp" width="7%"></span>
+  </div><!--powerdeby-->
+
+  <div class="d-flex gap-2 mt-5" ><!--images-->
+    <div>
+        <img src="images/Fullbody.png" width="200">
+    </div>
+
+    <div>
+        <img src="images/Vitamins.png" width="200">
+
+    </div>
+
+    <div>
+        <img src="images/Diabetes.png" width="200">
+
+    </div>
+
+    <div>
+        <img src="images/Fever.png" width="200">
+
+    </div>
+
+    <div>
+        <img src="images/womencare.png" width="200">
+
+    </div>
+
+    <div>
+        <img src="images/Thyroid.png" width="200">
+
+    </div>
+
+    <div>
+        <img src="images/covid.png" width="200">
+    </div>
+
+  </div><!--images-->
+
+
+  <div class=" border border-1 mt-5 w-100  d-flex p-3"><!--ol-->
+    <div class="text-center pt-3 me-3">
+        <h3>Order with Prescription</h3>
+        <p>Upload prescription and we will deliver your medicines</p>
+    </div>
+
+    <div class=" ps-2 pt-4">
+        <span>How does this work?</span>
+        <ol >
+            <li>Upload a photo of your prescription</li>
+            <li>Add delivery address and place the order</li>
+        </ol>
+    </div>
+
+
+    <div class="pt-5">
+        
+        <ol >
+            <li>We will call you to confirm the medicines</li>
+            <li>Now, sit back! your medicines will get delivered at your doorstep</li>
+        </ol>
+    </div>
+  </div><!--ol-->
+
+  <div class="mt-5">
+    <h2>Shop by Categories</h2>
+  </div>
+
+
+
+  <div class="mt-4 d-flex text-center gap-4"><!--img-->
+    
+    <div>
+        <div class="imgs border border-1 p-2"><img src="images/prod1.webp" width="150"></div>
+        <div><span>Pharmeasy </span></div>
+        
+    </div>
+
+    <div>
+        <div class="imgs border border-1 p-2"><img src="images/prod2.webp" width="150"></div>
+        <div><span>Pharmeasy </span></div>
+        
+    </div>
+
+
+    <div>
+        <div class="imgs border border-1 p-2"><img src="images/prod3.webp" width="150"></div>
+        <div><span>Pharmeasy </span></div>
+        
+    </div>
+
+
+    <div>
+        <div class="imgs border border-1 p-2"><img src="images/prod4.webp" width="150"></div>
+        <div><span>Pharmeasy </span></div>
+        
+    </div>
+
+
+    <div>
+        <div class="imgs border border-1 p-2"><img src="images/prod5.webp" width="150"></div>
+        <div><span>Pharmeasy </span></div>
+        
+    </div>
+
+
+    <div>
+        <div class="imgs border border-1 p-2"><img src="images/prod6.webp" width="150"></div>
+        <div><span>Pharmeasy </span></div>
+        
+    </div>
+
+    <div>
+        <div class="imgs border border-1 p-2"><img src="images/prod7.webp" width="150"></div>
+        <div><span>Pharmeasy </span></div>
+        
+    </div>
+
+    <div>
+        <div class="imgs border border-1 p-2"><img src="images/prod8.webp" width="150"></div>
+        <div><span>Pharmeasy </span></div>
+        
+    </div>
+
+   
+
+
+
+
+
+
+
+
+  </div><!--img-->
+
+
+  <div class="mt-5">
+    <h2>New Launches</h2>
+  </div>
+  <div><span>New wellness range just for you!</span></div>
+
+
+  <div class="mt-4 d-flex text-start gap-4"><!--img-->
+<div>
+    <div class="imgs border border-1 p-3"><img src="images/prod9.webp" width="150"></div>
+    <div><span>Pharmeasy </span></div>
+    <div><span>Multivitamin..</span></div>
+    <div><span>MRP</span><strike>₹35222</strike></div>
+    <div><span>₹199.5</span>&nbsp;<span class=" text-danger">(5%)</span></div>
+</div>
+
+
+
+<div>
+    <div class="imgs border border-1 p-3"><img src="images/prod15.webp" width="150" ></div>
+    <div><span>Pharmeasy </span></div>
+    <div><span>Multivitamin..</span></div>
+    <div><span>MRP</span><strike>₹35222</strike></div>
+    <div><span>₹199.5</span>&nbsp;<span class=" text-danger">(5%)</span></div>
+</div>
+
+
+<div>
+    <div class="imgs border border-1 p-3"><img src="images/prod11.webp" width="150"></div>
+    <div><span>Pharmeasy </span></div>
+    <div><span>Multivitamin..</span></div>
+    <div><span>MRP</span><strike>₹35222</strike></div>
+    <div><span>₹199.5</span>&nbsp;<span class=" text-danger">(5%)</span></div>
+</div>
+
+
+<div>
+    <div class="imgs border border-1 p-3"><img src="images/prod12.webp" width="150"></div>
+    <div><span>Pharmeasy </span></div>
+    <div><span>Multivitamin..</span></div>
+    <div><span>MRP</span><strike>₹35222</strike></div>
+    <div><span>₹199.5</span>&nbsp;<span class=" text-danger">(5%)</span></div>
+</div>
+
+
+
+
+<div>
+    <div class="imgs border border-1 p-3"><img src="images/prod13.webp" width="150"></div>
+    <div><span>Pharmeasy </span></div>
+    <div><span>Multivitamin..</span></div>
+    <div><span>MRP</span><strike>₹35222</strike></div>
+    <div><span>₹199.5</span>&nbsp;<span class=" text-danger">(5%)</span></div>
+</div>
+
+
+<div>
+    <div class="imgs border border-1 p-3"><img src="images/prod14.webp" width="130"></div>
+    <div><span>Pharmeasy </span></div>
+    <div><span>Multivitamin..</span></div>
+    <div><span>MRP</span><strike>₹35222</strike></div>
+    <div><span>₹199.5</span>&nbsp;<span class=" text-danger">(5%)</span></div>
+</div>
+
+<div>
+    <div class="imgs border border-1 p-3"><img src="images/prod15.webp" width="155"></div>
+    <div><span>Pharmeasy </span></div>
+    <div><span>Multivitamin..</span></div>
+    <div><span>MRP</span><strike>₹35222</strike></div>
+    <div><span>₹199.5</span>&nbsp;<span class=" text-danger">(5%)</span></div>
+</div>
+  </div><!--img-->
+
+  <div class="mt-5"><h2>Trending Near You</h2></div>
+  <div><span>Popular in your city</span></div>
+
+
+  <div class="mt-4 d-flex text-start gap-4"><!--img-->
+    <div>
+        <div class="imgs border border-1 p-2"><img src="images/prod16.webp" width="130" height="150"></div>
+        <div><span>Pharmeasy </span></div>
+        <div><span>Multivitamin..</span></div>
+        <div><span>MRP</span><strike>₹35222</strike></div>
+        <div><span>₹199.5</span>&nbsp;<span class=" text-danger">(5%)</span></div>
+    </div>
+
+
+    <div>
+        <div class="imgs border border-1 p-3"><img src="images/prod17.webp" width="150"></div>
+        <div><span>Pharmeasy </span></div>
+        <div><span>Multivitamin..</span></div>
+        <div><span>MRP</span><strike>₹35222</strike></div>
+        <div><span>₹199.5</span>&nbsp;<span class=" text-danger">(5%)</span></div>
+    </div>
+
+
+    <div>
+        <div class="imgs border border-1 p-3"><img src="images/prod18.webp" width="150"></div>
+        <div><span>Pharmeasy </span></div>
+        <div><span>Multivitamin..</span></div>
+        <div><span>MRP</span><strike>₹35222</strike></div>
+        <div><span>₹199.5</span>&nbsp;<span class=" text-danger">(5%)</span></div>
+    </div>
+
+
+    <div>
+        <div class="imgs border border-1 p-3"><img src="images/prod19.webp" width="150" height="150"></div>
+        <div><span>Pharmeasy </span></div>
+        <div><span>Multivitamin..</span></div>
+        <div><span>MRP</span><strike>₹35222</strike></div>
+        <div><span>₹199.5</span>&nbsp;<span class=" text-danger">(5%)</span></div>
+    </div>
+
+
+
+    <div>
+        <div class="imgs border border-1 p-3"><img src="images/prod20.webp" width="140" height="150"></div>
+        <div><span>Pharmeasy </span></div>
+        <div><span>Multivitamin..</span></div>
+        <div><span>MRP</span><strike>₹35222</strike></div>
+        <div><span>₹199.5</span>&nbsp;<span class=" text-danger">(5%)</span></div>
+    </div>
+
+
+    <div>
+        <div class="imgs border border-1 p-3"><img src="images/prod21.webp" width="150" height="150"></div>
+        <div><span>Pharmeasy </span></div>
+        <div><span>Multivitamin..</span></div>
+        <div><span>MRP</span><strike>₹35222</strike></div>
+        <div><span>₹199.5</span>&nbsp;<span class=" text-danger">(5%)</span></div>
+    </div>
+    </div>
+
+    <div class="grad d-flex gap-5 mt-5 position-relative"><!--baner-->
+        <div class="ps-5 pt-3 pb-5">
+           <h2> Become a  member </h2><br>
+             And enjoy extra bachat on every order
+        </div>
+
+<div class="ps-5 pt-3 pb-5">
+
+<p>Save 5% on medicines, 50% on 1st lab test & get FREE delivery with PLUS <br>membership Know more family Frequen</p>
+<div><button class="btn btn-warning">Explore Now <span class="badge text-bg-info">></span></button></div>
+</div>
+
+<div class="position-absolute end-0 bottom-0 pe-5 "><img src="images/PlusFamily.png"></div>
+    </div><!--baner-->
+
+    <div class="mt-5">
+        <h2>Frequently Booked Lab Tests</h2>
+    </div>
+
+
+    <div class="d-flex gap-4 w-100 p-4"><!--box-->
+   <div class="box box1 position-relative" style="background-color: rgb(226, 243, 243);">
+    <div class="mb-3">
+        <button class="btn btn-danger text-white">93% OFF</button>
+    </div>
+    <div>
+        <h5 class="text-start">Comprehensive Full Body Check up Test with Vitamin D & B12</h5>
+    </div>
+
+    <div><p>Measures Vitamin D & B12 levels and other essential parameters</p></div>
+
+    <div><strike>4999</strike></div>
+    <div>1799</div>
+    <div><img src="images/doctor.png" class="position-absolute end-0 bottom-0" width="100" ></div>
+
+   </div>
+
+
+   <div class="box position-relative" style="background-color: rgba(220, 209, 187, 0.884);">
+    <div class="mb-3">
+        <button class="btn btn-danger text-white">93% OFF</button>
+    </div>
+    <div>
+        <h5 class="text-start">Healthy 2024 Full Body Checkup</h5>
+    </div>
+
+    <div><p>Diagnostic tool for screening and monitoring of your health</p></div>
+
+    <div><strike>3599</strike></div>
+    <div>1299</div>
+    <div><img src="images/man.png" class="position-absolute end-0 bottom-0" width="85"></div>
+
+   </div>
+
+
+
+   <div class="box position-relative" style="background-color: rgb(226, 243, 243);">
+    <div class="mb-3">
+        <button class="btn btn-danger text-white">93% OFF</button>
+    </div>
+    <div>
+        <h5>Diabetes Care</h5>
+    </div>
+
+    <div><p>Specially designed package to cover the preventive care aspects for diabetics</p></div>
+
+    <div><strike>4999</strike></div>
+    <div>1799</div>
+    <div><img src="images/twomembers.png" class="position-absolute end-0 bottom-0" width="100"> </div>
+
+   </div>
+
+
+   <div class="box position-relative " style="background-color: rgba(220, 209, 187, 0.884); ">
+    <div class="mb-3">
+        <button class="btn btn-danger text-white">93% OFF</button>
+    </div>
+    <div>
+        <h5>Basic Health Checkup</h5>
+    </div>
+
+    <div><p>Assesses health of 47 essential body parameters</p></div>
+
+    <div><strike>4999</strike></div>
+    <div>1799</div>
+    <div><img src="images/twogirls.png" class="position-absolute end-0 bottom-0" width="100" height="100"></div>
+
+   </div>
+
+
+
+
+
+
+
+    </div>
+  
+
+
+
+
+
+
+
+    
+  
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    
+</body>
+</html>
