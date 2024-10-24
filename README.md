@@ -11,8 +11,11 @@ This project is a healthcare e-commerce platform that allows users to register, 
 - **User Authentication**: Modal-based forms for user registration and login.
 - **Product Categories**: Categories include Medicine, Lab Tests, Healthcare services, and more.
 - **Interactive Elements**: Dropdowns and hover effects for a smooth user experience.
+  
 
 ![pharmaApp](/images/pharma2.png)    
+
+
 
 
 ![pharmaApp](/images/pharma3.png)
