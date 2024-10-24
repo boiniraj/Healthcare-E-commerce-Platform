@@ -39,4 +39,4 @@ This project is a healthcare e-commerce platform that allows users to register, 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/healthcare-ecommerce-platform.git
+   git clone (https://github.com/boiniraj/Healthcare-E-commerce-Platform.git)
