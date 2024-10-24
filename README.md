@@ -2,6 +2,7 @@
 
 This project is a healthcare e-commerce platform that allows users to register, log in, and purchase products like medicines, lab tests, and healthcare services. It is built with HTML, Bootstrap for styling, and modal components for registration and login.
 
+
 ![pharmaApp](/images/pharma1.png)
 
 ## Features
@@ -11,7 +12,11 @@ This project is a healthcare e-commerce platform that allows users to register, 
 - **Product Categories**: Categories include Medicine, Lab Tests, Healthcare services, and more.
 - **Interactive Elements**: Dropdowns and hover effects for a smooth user experience.
 
-![pharmaApp](/images/pharma2.png)    ![pharmaApp](/images/pharma3.png)
+![pharmaApp](/images/pharma2.png)    
+
+
+![pharmaApp](/images/pharma3.png)
+
 
 ## Installation
 
