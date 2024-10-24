@@ -28,7 +28,7 @@ This project is a healthcare e-commerce platform that allows users to register, 
 - **Node.js**: Make sure you have Node.js installed. You can download it from [here](https://nodejs.org/).
 - **Bootstrap Icons and CSS**: This project uses Bootstrap for styling and Bootstrap Icons for UI elements. Ensure you have installed the dependencies as outlined below.
   
-## Some website screenshots
+## website screenshots
 
 ![appimages](/images/pharma4.png)
 
